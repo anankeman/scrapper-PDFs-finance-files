@@ -5,24 +5,13 @@ Created on Thu Dec 21 09:37:22 2017
 @author: Felipe
 """
 """
-from wand.image import Image as Img
-with Img(filename='file_name.pdf', resolution=300) as img:
-    img.compression_quality = 99
-    img.save(filename='image_name.jpg')
-    
-from PIL import Image
-img = Image.open('image_name.jpg')
-crop_img = img.crop((x1, y1, x2, y2))
-crop_img.save('amount.jpg')    
-    
-arch = 'C:/Users/Felipe/Dropbox/Nodo Astroturismo 2017 - 2018/1-Linea base/Beneficiarios/BASS cte_consulta_terceros_02.pdf'
 
 """
 
 import PyPDF2
 import glob
 
-path = 'C:/Users/Felipe/Dropbox/Nodo Astroturismo 2017 - 2018/1-Linea base/Beneficiarios/*.pdf'   
+path = '~/Beneficiarios/*.pdf'   
 files = glob.glob(path)
 todo = []
 for file in files:
